@@ -5,7 +5,6 @@ public class ForLoop {
             System.out.println(counter);
         }
 
-        // Commit change example
         for(double rate = 2.0; rate <= 5.0; rate++){
             System.out.println(calculateInterest( 10000d,rate));
         }
