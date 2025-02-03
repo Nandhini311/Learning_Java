@@ -7,6 +7,7 @@ public class ForLoop {
 
         for(double rate = 2.0; rate <= 5.0; rate++){
             System.out.println(calculateInterest( 10000d,rate));
+            System.out.println(rate); //added
         }
     }
 
