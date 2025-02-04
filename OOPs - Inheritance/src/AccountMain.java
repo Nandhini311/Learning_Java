@@ -25,5 +25,9 @@ public class AccountMain {
 
         Account acc3 = new Account();
         acc3.Display();
+
+        Account acc4 = new Account("Tim","tim@gmail.com", "9566789321");
+        acc4.Display();
+
     }
 }

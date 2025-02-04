@@ -77,6 +77,10 @@ public class Account {
         this.email = email;
     }
 
+    public Account(String customerName, String email, String phone){
+        this(8999890, 29009, customerName, email, phone);
+    }
+
     public void Display(){
         System.out.println("Below are the details");
         System.out.println("Account Number: " + accNumber);
