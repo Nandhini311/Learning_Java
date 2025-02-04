@@ -12,6 +12,7 @@ public class StudentPOJOMain {
             }, "05/11/1985", "Java MasterClass");
             System.out.println(s);
             }
+
             //how are these different objects? won't all the instance be named s?
             /* Even though the variable s is reused in each iteration,
             each call to new StudentPOJO(...) creates a completely new object in memory.
