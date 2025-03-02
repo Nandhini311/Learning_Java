@@ -1,8 +1,8 @@
-public class MobileContact {
+public class Contact {
     private String myNumber;
     private String name;
 
-    public MobileContact(String name, String phoneNumber){
+    public Contact(String name, String phoneNumber){
         this.name = name;
         this.myNumber = phoneNumber;
     }
@@ -15,8 +15,8 @@ public class MobileContact {
         return myNumber;
     }
 
-    public static MobileContact createContact(String name, String phoneNumber){
-        MobileContact contact = new MobileContact(name, phoneNumber);
+    public static Contact createContact(String name, String phoneNumber){
+        Contact contact = new Contact(name, phoneNumber);
         return contact;
     }
 }
