@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Bird bird = new Bird();
@@ -30,6 +33,42 @@ public class Main {
         double KmsTraveled = 100;
         double milesTraveled = KmsTraveled * FlightEnabled.KM_TO_MILES;
 
+        //not recommended declaration, it is preferred to use the interfaces
+        ArrayList<FlightEnabled> fliers = new ArrayList<>();
+        fliers.add(bird);
+
+        List<FlightEnabled> betterFliers = new ArrayList<>();
+        betterFliers.add(bird);
+        //Once a class implements an interface, objects of that class can be referenced as instances of the interface type.
+
+        triggerFliers(fliers);
+        flyFliers(fliers);
+        landFliers(fliers);
+
+        triggerFliers(betterFliers);
+        flyFliers(betterFliers);
+        //landFliers(betterFliers);
+
+
+    }
+
+    //let's see why declaring with the interface is better
+    private static void triggerFliers(List<FlightEnabled> fliers){
+        for(var flier : fliers){
+            flier.takeOff();
+        }
+    }
+
+    private static void flyFliers(List<FlightEnabled> fliers){
+        for(var flier : fliers){
+            flier.fly();
+        }
+    }
+
+    private static void landFliers(ArrayList<FlightEnabled> fliers){
+        for(var flier : fliers){
+            flier.land();
+        }
     }
 
     private static void inFlight(FlightEnabled flier){
